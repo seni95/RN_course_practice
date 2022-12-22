@@ -9,19 +9,7 @@ const Tab = createBottomTabNavigator();
 
 const Tabs = ()=>{
     const isDark = useColorScheme()==="dark";
-    return (<Tab.Navigator screenOptions={{
-        tabBarStyle:{
-        backgroundColor : isDark?BLACK_COLOR:"white"
-        },
-        tabBarActiveTintColor:isDark?YELLOW_COLOR:BLACK_COLOR,
-        tabBarInactiveTintColor:isDark?"#F6F6F6":"#A6A9B6",
-        headerStyle:{
-            backgroundColor : isDark?BLACK_COLOR:"white"
-        },
-        headerTitleStyle:{
-            color:isDark?YELLOW_COLOR:BLACK_COLOR,
-        }
-    }}>
+    return (<Tab.Navigator screenOptions={{}}>
     <Tab.Screen name="Movies" component={Movies}/>
     <Tab.Screen name="Tv" component={Tv}/>
     <Tab.Screen name="Search" component={Search}/>
