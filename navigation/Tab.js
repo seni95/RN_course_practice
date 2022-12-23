@@ -5,6 +5,7 @@ import Tv from "../screens/Tv";
 import { useColorScheme } from "react-native";
 import { BLACK_COLOR, YELLOW_COLOR } from "../color";
 import {Ionicons} from '@expo/vector-icons';
+import Stack from "./Stack";
 
 const Tab = createBottomTabNavigator();
 
@@ -23,7 +24,8 @@ const Tabs = ()=>{
             color:isDark?YELLOW_COLOR:BLACK_COLOR,
         }
     }}>
-    <Tab.Screen name="Movies" component={Movies} options={{
+    <Tab.Screen name="Movies" component={Stack} options={{
+        headerShown:false,
         tabBarIcon:({focused,color,size})=>{
             return <Ionicons name="film" size={size} color={color} />
         }

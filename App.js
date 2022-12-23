@@ -7,6 +7,7 @@ import { Asset,useAssets } from 'expo-asset';
 import { NavigationContainer,DarkTheme,DefaultTheme } from '@react-navigation/native';
 import Tabs from './navigation/Tab';
 import { useColorScheme } from "react-native";
+import Stack from './navigation/Stack';
 
 export default function App() {
 
@@ -20,7 +21,7 @@ export default function App() {
     );}
 
   return <NavigationContainer theme={isDark?DarkTheme:DefaultTheme}>
-    <Tabs/>
+    <Tabs></Tabs>
   </NavigationContainer>;
 }
 
