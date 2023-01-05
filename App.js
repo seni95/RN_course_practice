@@ -8,6 +8,9 @@ import { NavigationContainer,DarkTheme,DefaultTheme } from '@react-navigation/na
 import Tabs from './navigation/Tab';
 import { useColorScheme } from "react-native";
 import Stack from './navigation/Stack';
+import Root from './navigation/Root';
+import { ThemeProvider } from 'styled-components';
+import { darkTheme, lightTheme } from './styled';
 
 export default function App() {
 
@@ -20,8 +23,10 @@ export default function App() {
     <AppLoading></AppLoading>
     );}
 
-  return <NavigationContainer theme={isDark?DarkTheme:DefaultTheme}>
-    <Tabs></Tabs>
-  </NavigationContainer>;
+  return <ThemeProvider theme={isDark?darkTheme:lightTheme}>
+  <NavigationContainer theme={isDark?DarkTheme:DefaultTheme}>
+    <Root></Root>
+  </NavigationContainer>
+  </ThemeProvider>;
 }
 

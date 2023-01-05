@@ -24,8 +24,7 @@ const Tabs = ()=>{
             color:isDark?YELLOW_COLOR:BLACK_COLOR,
         }
     }}>
-    <Tab.Screen name="Movies" component={Stack} options={{
-        headerShown:false,
+    <Tab.Screen name="Movies" component={Movies} options={{
         tabBarIcon:({focused,color,size})=>{
             return <Ionicons name="film" size={size} color={color} />
         }
