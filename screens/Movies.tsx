@@ -11,7 +11,7 @@ background-color:${props=>props.theme.mainBgColor}
 
 
 const Title = styled.Text`
-color:blue
+color:${(props)=>props.theme.textColor}
 `; 
 
 const Movies = ({navigation:{navigate}})=><Btn 
