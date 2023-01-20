@@ -12,6 +12,7 @@
     "@react-navigation/bottom-tabs": "^6.5.2",
     "@react-navigation/native": "^6.1.1",
     "@react-navigation/native-stack": "^6.9.7",
+    "@types/styled-components-react-native": "^5.2.1",
     "expo": "~47.0.8",
     "expo-app-loading": "~2.1.1",
     "expo-asset": "~8.6.2",
