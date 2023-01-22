@@ -2,8 +2,23 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
 import {TouchableOpacity,Text,StyleSheet} from "react-native";
 import styled from "styled-components/native";
+import Swiper from 'react-native-web-swiper';
+// import { View } from 'react-native';
 
+const ScrollView = styled.ScrollView`
+backgroundColor : ${(props)=>props.theme.mainBgColor}
+`;
 
-const Movies : React.FC<NativeStackScreenProps<any,'Movies'>> = ()=>null;
+const View = styled.View`
+flex:1`;
+
+const Movies : React.FC<NativeStackScreenProps<any,'Movies'>> = ()=><ScrollView>
+    <Swiper containerStyle={{width:"100%", height:300}}>
+        <View style={{backgroundColor:"red"}}></View>
+        <View style={{backgroundColor:"blue"}}></View>
+        <View style={{backgroundColor:"red"}}></View>
+        <View style={{backgroundColor:"blue"}}></View>
+    </Swiper>
+</ScrollView>;
 
 export default Movies;
