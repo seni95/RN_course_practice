@@ -28,3 +28,4 @@ const Movies : React.FC<NativeStackScreenProps<any,'Movies'>> = ()=><ScrollView>
 </ScrollView>;
 
 export default Movies;
+//changes
